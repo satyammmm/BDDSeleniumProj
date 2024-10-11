@@ -1,0 +1,168 @@
+(TestAutomation) PS C:\Users\spati107\TataTech\SeleniumProject\steps> behave testcase.feature --tags=completed
+Feature: Amazon Test Case # testcase.feature:1
+
+  @completed                                       
+  Scenario: 1. Launch browser  # testcase.feature:3
+    Given launch browser       # testcase.py:9     
+[5956:18092:1011/091725.804:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:56611/devtools/browser/5bf191dc-9968-4ef5-8a70-ce1a494cfaa6
+    When get amazon url        # testcase.py:16
+[5956:18092:1011/091732.137:ERROR:policy_conversions_client.cc(322)] DnsPrefetchingEnabled has an error of type: Unknown policy.
+[5956:18092:1011/091732.137:ERROR:policy_conversions_client.cc(322)] PluginsAllowedForUrls has an error of type: Unknown policy.
+[5956:18092:1011/091732.138:ERROR:policy_conversions_client.cc(322)] SSLVersionMin has an error of type: Unknown policy.        
+[5956:27652:1011/091733.079:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+    Then page should appear    # testcase.py:22
+
+  @completed
+  Scenario: 2. Search For An Non-Existing Product                 # testcase.feature:9
+    Given assert flag from scenario 1                             # testcase.py:27
+[19912:8924:1011/091743.290:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:56816/devtools/browser/4418b51e-5ed5-451c-a377-e15dc5868a40
+    When click on search icon and search for non existing product # testcase.py:34
+    Then No result found should be displayed                      # testcase.py:39
+[19912:8924:1011/091750.779:ERROR:policy_conversions_client.cc(322)] DnsPrefetchingEnabled has an error of type: Unknown policy.
+[19912:8924:1011/091750.780:ERROR:policy_conversions_client.cc(322)] PluginsAllowedForUrls has an error of type: Unknown policy.
+[19912:8924:1011/091750.781:ERROR:policy_conversions_client.cc(322)] SSLVersionMin has an error of type: Unknown policy.
+[19912:27468:1011/091751.677:ERROR:registration_request.cc(291)] Registration response error message: PHONE_REGISTRATION_ERROR
+[19912:27468:1011/091751.814:ERROR:registration_request.cc(291)] Registration response error message: PHONE_REGISTRATION_ERROR
+Created TensorFlow Lite XNNPACK delegate for CPU.
+      Traceback (most recent call last):
+        File "C:\Users\spati107\Downloads\TestAutomation\Lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "C:\Users\spati107\Downloads\TestAutomation\Lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "testcase.py", line 42, in step_impl
+          assert context.driver.find_element(By.XPATH, "//span[@class='a-size-medium a-color-base' and contains(text(),'No results for ')]").is_displayed()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\spati107\Downloads\TestAutomation\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 748, in find_element
+          return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\spati107\Downloads\TestAutomation\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+          self.error_handler.check_response(response)
+        File "C:\Users\spati107\Downloads\TestAutomation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+          raise exception_class(message, screen, stacktrace)
+      selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='a-size-medium a-color-base' and contains(text(),'No results for ')]"}
+        (Session info: chrome=129.0.6668.90); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+      Stacktrace:
+        GetHandleVerifier [0x00007FF76554B095+29557]
+        (No symbol) [0x00007FF7654BFA50]
+        (No symbol) [0x00007FF76537B56A]
+        (No symbol) [0x00007FF7653CF695]
+        (No symbol) [0x00007FF7653CF8EC]
+        (No symbol) [0x00007FF76541B777]
+        (No symbol) [0x00007FF7653F71CF]
+        (No symbol) [0x00007FF76541851C]
+        (No symbol) [0x00007FF7653F6F33]
+        (No symbol) [0x00007FF7653C116F]
+        (No symbol) [0x00007FF7653C22D1]
+        GetHandleVerifier [0x00007FF76587C96D+3378253]
+        GetHandleVerifier [0x00007FF7658C8497+3688311]
+        GetHandleVerifier [0x00007FF7658BD1CB+3642539]
+        GetHandleVerifier [0x00007FF76560A6B6+813462]
+        (No symbol) [0x00007FF7654CAB5F]
+        (No symbol) [0x00007FF7654C6B74]
+        (No symbol) [0x00007FF7654C6D10]
+        (No symbol) [0x00007FF7654B5C1F]
+        (No symbol) [0x00007FFAFBFE7374]
+        RtlUserThreadStart [0x00007FFAFDE1CC91+33]
+
+
+  @completed
+  Scenario: 3. Search For An Existing Product                 # testcase.feature:15
+    Given assert flag from scenario 2                         # testcase.py:45
+[4400:32336:1011/091814.575:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:57048/devtools/browser/82ace069-42ac-4377-aa1e-975e5f53fa98
+(TestAutomation) PS C:\Users\spati107\TataTech\SeleniumProject\steps> behave testcase.feature --tags=completed
+Feature: Amazon Test Case # testcase.feature:1
+
+  @completed                                       
+  Scenario: 1. Launch browser  # testcase.feature:3
+    Given launch browser       # testcase.py:9     
+[23132:24508:1011/100807.779:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:65074/devtools/browser/2f352eb8-6a6b-4e89-b439-e5040908addb
+    When get amazon url        # testcase.py:16
+[23132:24508:1011/100817.148:ERROR:policy_conversions_client.cc(322)] DnsPrefetchingEnabled has an error of type: Unknown policy.
+[23132:24508:1011/100817.149:ERROR:policy_conversions_client.cc(322)] PluginsAllowedForUrls has an error of type: Unknown policy.
+[23132:24508:1011/100817.149:ERROR:policy_conversions_client.cc(322)] SSLVersionMin has an error of type: Unknown policy.        
+    Then page should appear    # testcase.py:22
+
+  @completed
+  Scenario: 2. Search For An Non-Existing Product                 # testcase.feature:9
+    Given assert flag from scenario 1                             # testcase.py:27
+[3848:30960:1011/100829.347:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:65297/devtools/browser/4b291337-db7f-443e-b3df-a62857ecda6b
+    When click on search icon and search for non existing product # testcase.py:34
+    Then No result found should be displayed                      # testcase.py:39
+[3848:30960:1011/100835.853:ERROR:policy_conversions_client.cc(322)] DnsPrefetchingEnabled has an error of type: Unknown policy.
+[3848:30960:1011/100835.854:ERROR:policy_conversions_client.cc(322)] PluginsAllowedForUrls has an error of type: Unknown policy.
+[3848:30960:1011/100835.855:ERROR:policy_conversions_client.cc(322)] SSLVersionMin has an error of type: Unknown policy.
+
+  @completed
+  Scenario: 3. Search For An Existing Product                 # testcase.feature:15
+    Given assert flag from scenario 2                         # testcase.py:45
+[9744:29184:1011/100846.244:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:49167/devtools/browser/bca4f293-3997-455c-a4d8-8aed559cf76f
+    When click on search icon and search for existing product # testcase.py:52
+    Then result should be displayed                           # testcase.py:66
+
+(TestAutomation) PS C:\Users\spati107\TataTech\SeleniumProject\steps> behave testcase.feature --tags=completed
+Feature: Amazon Test Case # testcase.feature:1
+
+  @completed                                       
+  Scenario: 1. Launch browser  # testcase.feature:3
+    Given launch browser       # testcase.py:9     
+[14664:1484:1011/105602.488:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:54967/devtools/browser/29fb1360-aba0-4724-943e-f9e9bcdc562f
+    When get amazon url        # testcase.py:16
+[14664:1484:1011/105607.994:ERROR:policy_conversions_client.cc(322)] DnsPrefetchingEnabled has an error of type: Unknown policy.
+[14664:1484:1011/105608.020:ERROR:policy_conversions_client.cc(322)] PluginsAllowedForUrls has an error of type: Unknown policy.
+[14664:1484:1011/105608.020:ERROR:policy_conversions_client.cc(322)] SSLVersionMin has an error of type: Unknown policy.        
+    Then page should appear    # testcase.py:22
+
+  @completed
+  Scenario: 2. Search For An Non-Existing Product                 # testcase.feature:9
+    Given assert flag from scenario 1                             # testcase.py:27
+[9636:12236:1011/105619.720:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:55184/devtools/browser/59d4df0b-9b7e-40d2-9cf8-7340318b265d
+    When click on search icon and search for non existing product # testcase.py:34
+    Then No result found should be displayed                      # testcase.py:39
+
+  @completed
+  Scenario: 3. Search For An Existing Product                 # testcase.feature:15
+    Given assert flag from scenario 2                         # testcase.py:44
+[2756:16884:1011/105634.004:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:55343/devtools/browser/b653b5ba-1287-415e-b99a-d66e2b7330db
+    When click on search icon and search for existing product # testcase.py:51
+    Then result should be displayed                           # testcase.py:65
+
+  @completed
+  Scenario: 4. Add a product to the cart          # testcase.feature:21
+    Given assert flag from scenario 3             # testcase.py:70
+[17736:17732:1011/105650.540:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:55585/devtools/browser/dfff3165-b80d-418a-8d20-01769b6a7b3e
+    When select first result from search result   # testcase.py:77
+    Then selected product should be added to cart # testcase.py:87
+
+  @completed
+  Scenario: 5. Remove product from the cart  # testcase.feature:27
+    Given assert flag from scenario 4        # testcase.py:92
+[25420:28808:1011/105708.982:ERROR:cloud_policy_validator.cc(614)] New signature verification failed
+
+DevTools listening on ws://127.0.0.1:55809/devtools/browser/50cfb2dc-eb7c-4043-a55c-c646c9c5f28a
+    When remove product form the cart        # testcase.py:99
+    Then cart should be empty                # testcase.py:111
+
+1 feature passed, 0 failed, 0 skipped
+5 scenarios passed, 0 failed, 0 skipped
+15 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 1m5.897s
